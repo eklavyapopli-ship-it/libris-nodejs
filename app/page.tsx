@@ -8,11 +8,7 @@ type Turn = {
   ts: number;
 };
 
-const quickPrompts = [
-  "Give me 3 interpretations of this ending.",
-  "Recommend books with similar vibes (no quotes).",
-  "Let’s do a ‘what-if’ scenario for the main character.",
-];
+
 
 function formatTime(ts: number) {
   const d = new Date(ts);
@@ -148,21 +144,7 @@ export default function NovelAI() {
           Quick starts
         </div>
 
-        <div className="space-y-2">
-          {quickPrompts.map((p) => (
-            <button
-              key={p}
-              onClick={() => {
-                setMessage(p);
-                setSidebarOpen(false);
-              }}
-              disabled={loading}
-              className="w-full text-left rounded-xl border border-zinc-200 bg-white hover:bg-zinc-50 transition px-4 py-3 text-sm text-zinc-800 disabled:opacity-50"
-            >
-              {p}
-            </button>
-          ))}
-        </div>
+
 
         <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-zinc-800">
           <div className="font-medium text-amber-800">Tip</div>
@@ -192,7 +174,7 @@ export default function NovelAI() {
           <div className="flex-1">
             <div className="text-sm text-zinc-700">The Archive</div>
             <div className="text-xs text-zinc-500">
-              Discuss novels, characters, themes — spoiler-aware if you ask.
+              Discuss novels, characters, themes.
             </div>
           </div>
 
