@@ -24,8 +24,6 @@ export default function NovelAI() {
 
   const listRef = useRef<HTMLDivElement | null>(null);
 
-  // ✅ Replace this with your own image path or URL
-  // If you put image in /public, use: "/your-image.jpg"
   const sidebarImageSrc = "/to-all-the-boys.webp";
 
   const fillFromImage = () => {
@@ -89,7 +87,7 @@ export default function NovelAI() {
     }
   };
 
-  // Sidebar component reused for desktop + drawer
+
   const Sidebar = () => (
     <aside className="h-full rounded-2xl border border-zinc-200 bg-white/85 backdrop-blur p-6 shadow-[0_20px_80px_rgba(0,0,0,0.10)]">
       <div className="flex items-start justify-between">
@@ -187,7 +185,7 @@ export default function NovelAI() {
         </div>
       </div>
 
-      {/* Mobile drawer overlay */}
+   
       {sidebarOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <button
@@ -214,14 +212,14 @@ export default function NovelAI() {
 
       <div className="relative mx-auto max-w-6xl px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6">
-          {/* Desktop sidebar */}
+      
           <div className="hidden lg:block">
             <Sidebar />
           </div>
 
-          {/* Chat */}
+   
           <section className="rounded-2xl border border-zinc-200 bg-white/80 backdrop-blur shadow-[0_20px_80px_rgba(0,0,0,0.10)] overflow-hidden">
-            {/* Messages */}
+        
             <div
               ref={listRef}
               className="px-5 sm:px-6 py-5 h-[62vh] lg:h-[70vh] overflow-y-auto"
